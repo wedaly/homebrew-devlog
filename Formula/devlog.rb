@@ -15,4 +15,9 @@ class Devlog < Formula
       set rtp+=#{opt_prefix}/integrations/vim
   EOS
   end
+
+  test do
+    ENV["DEVLOG_HOME"] = testpath
+    system bin/"devlog", "init", "-y"
+  end
 end
