@@ -10,10 +10,9 @@ class Devlog < Formula
   end
 
   def caveats; <<~EOS
-    To enable vim syntax highlighting, add this line to your .vimrc:
+    To enable vim syntax highlighting, add this line to your .vimrc
+    anywhere before `syntax enable`:
       set rtp+=#{opt_prefix}/integrations/vim
-
-    IMPORTANT: add this line BEFORE calling `syntax enable`.
   EOS
   end
 end
