@@ -6,14 +6,6 @@ class Devlog < Formula
 
   def install
     bin.install "devlog"
-    prefix.install "integrations"
-  end
-
-  def caveats; <<~EOS
-    To enable vim syntax highlighting, add this line to your .vimrc
-    anywhere before `syntax enable`:
-      set rtp+=#{opt_prefix}/integrations/vim
-  EOS
   end
 
   test do
